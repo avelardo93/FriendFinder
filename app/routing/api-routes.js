@@ -20,7 +20,7 @@ module.exports = function(app){
 	// ---------------------------------------------------------------------------
 	
 	app.get('/api/friends', function(req, res){
-		res.json(friendApi);
+		res.json(friendsData);
 	});
 
 	// API POST Requests
@@ -35,5 +35,11 @@ module.exports = function(app){
 
 		friendsData.push(req.body);
 			res.json(true); // KEY LINE
+
+		for (var i = 0; i < friendsData.length - 1; i++) {
+			for (var j = 0; j < friendsData.scores.length; i++) {
+				var scores = Math.abs(friendsData.scores.length[j] - friendsData[i])
+			}
+		}	
 	});	
 
